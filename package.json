@@ -1,0 +1,26 @@
+{
+  "name": "soofa-node-demo",
+  "version": "1.0.0",
+  "description": "soofa nodejs demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soofapay/soofa-nodejs-demo.git"
+  },
+  "keywords": [
+    "soofa"
+  ],
+  "author": "LaDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soofapay/soofa-nodejs-demo/issues"
+  },
+  "homepage": "https://github.com/soofapay/soofa-nodejs-demo#readme",
+  "dependencies": {
+    "mongodb": "^3.3.0-beta2",
+    "soofa": "^0.1.4"
+  }
+}
