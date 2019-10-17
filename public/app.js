@@ -72,7 +72,6 @@ app.client.request = (
     if (xhr.readyState === XMLHttpRequest.DONE) {
       let statusCode = xhr.status;
       let responseReturned = xhr.responseText;
-      console.log("75", statusCode);
 
       // Callback if requested
       if (callback) {
@@ -97,15 +96,12 @@ app.bindForms = function() {
     let allForms = document.querySelectorAll("form");
     for (let i = 0; i < allForms.length; i++) {
       allForms[i].addEventListener("submit", function(e) {
-        console.log(this);
         // Stop it from submitting
         e.preventDefault();
-        // return;
         let formId = this.id;
         let path = this.action;
         let method = this.method.toUpperCase();
 
-        // Turn the inputs into a payload
         let payload = {};
         let elements = this.elements;
         for (let i = 0; i < elements.length; i++) {
