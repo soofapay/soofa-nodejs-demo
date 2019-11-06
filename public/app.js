@@ -198,7 +198,6 @@ app.bindForms = function() {
             newPayload,
             (statusCode, response) => {
               if (statusCode === 200) {
-                console.log(response);
                 localStorage.clear();
                 window.location = "";
               }

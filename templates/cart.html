@@ -16,7 +16,7 @@
 
       <div class="row">
         <form class="soofa" action="/checkout" method="POST" id="checkout">
-          <input type="text" name="amount" value="10" hidden />
+          <input type="number" name="amount" id="amount" value="10" hidden />
           <input type="text" name="reference" value="NodeJs Demo" hidden />
           <input type="text" name="tid" value="" hidden />
           <input
@@ -33,8 +33,10 @@
 <script>
   if (localStorage.getItem("cart") !== null) {
     const cartedItems = JSON.parse(localStorage.cart);
-
+    let totalPrice = 0;
     cartedItems.forEach(element => {
+      totalPrice +=
+        parseInt(element.price, 10) * parseInt(element.quantity, 10);
       document.getElementById("tbody").innerHTML += `<tr>
             <td>${element.added_product}</td>
             <td>${element.price}</td>
@@ -58,6 +60,7 @@
             </td>
           </tr>`;
     });
+    document.getElementById("amount").value = totalPrice;
   } else {
     document.getElementById(
       "cart"
