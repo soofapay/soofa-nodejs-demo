@@ -11,7 +11,6 @@ $git clone https://github.com/soofapay/node-soofa.git
 ```
 
 installing project dependencies
-while in the project root (where the GemFile is located ), run the command below
 
 ```
 $npm install

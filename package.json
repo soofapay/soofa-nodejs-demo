@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/soofapay/soofa-nodejs-demo#readme",
   "dependencies": {
-    "mongodb": "^3.3.0-beta2",
     "soofa": "^0.1.4"
   }
 }
